@@ -4,6 +4,9 @@
   <link rel="icon" href="data:;base64,=">
   {sflm}
   <link rel="stylesheet" type="text/css" href="http://localhost:777/thm/css/design.css" media="screen, projection"/>
+  <script>
+    Ngn.authorized = <?= Auth::get('id') ? 'true' : 'false' ?>;
+  </script>
 </head>
 <body>
 <div class="header">
