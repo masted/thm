@@ -3,7 +3,8 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <link rel="icon" href="data:;base64,=">
   {sflm}
-  <link rel="stylesheet" type="text/css" href="http://localhost:777/thm/css/design.css" media="screen, projection"/>
+  <link rel="stylesheet" type="text/css" href="/thm/css/design.css" media="screen, projection"/>
+  <link rel="stylesheet" type="text/css" href="/thm/css/ulMenu.css" media="screen, projection"/>
   <script>
     Ngn.authorized = <?= Auth::get('id') ? 'true' : 'false' ?>;
   </script>
