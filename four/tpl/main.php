@@ -6,7 +6,13 @@
   <link rel="stylesheet" type="text/css" href="/thm/css/design.css" media="screen, projection"/>
   <link rel="stylesheet" type="text/css" href="/thm/css/ulMenu.css" media="screen, projection"/>
   <script>
-    Ngn.authorized = <?= Auth::get('id') ? 'true' : 'false' ?>;
+    Ngn.authorized = <?= Auth::get('id') ?: 'false' ?>;
+    Ngn.isAdmin  = <?= Misc::isAdmin() ? 'true' : 'false' ?>;
+    window.addEvent('domready', function() {
+      Ngn.addBtnAction('.auth', function() {
+        new Ngn.Dialog.Auth();
+      });
+    });
   </script>
 </head>
 <body>
@@ -20,7 +26,8 @@
       <? if ($id = Auth::get('id')) { ?>
         <div class="login"><?= UsersCore::getTitle($id) ?></div>
         <a href="?logout=1">Выход</a>
-      <? } else { ?>
+      <? }
+      else { ?>
         <a href="#" class="auth">Войти</a>
       <? } ?>
     </div>
@@ -32,7 +39,7 @@
   <? } ?>
   <div class="cTop"></div>
   <div class="cBody">
-  <? $this->tpl($d['layout'], $d) ?>
+    <? $this->tpl($d['layout'], $d) ?>
   </div>
   <div class="cBottom"></div>
 </div>
