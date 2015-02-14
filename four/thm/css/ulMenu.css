@@ -10,7 +10,10 @@ padding: 0;
 
 }
 
-.ulMenu a span span {
+.ulMenu a .tit {
+text-decoration: underline;
+}
+.ulMenu a span .cnt {
 display: block;
 float: right;
 }
@@ -27,20 +30,33 @@ border-bottom: 1px solid #E8E8E8;
 margin: 10px 0 10px 0;
 }
 
+.ulMenu ul li a span .tit {
+display: inline-block;
+width: 180px;
+}
+.ulMenu li li .tit {
+font-size: 11px;
+text-decoration: none;
+color: #555;
+}
+.ulMenu li li a:hover .tit {
+text-decoration: underline;
+color: #000;
+}
 
-.ulMenu ul li a span span {
+.ulMenu ul li a span .cnt {
 font-size: 9px;
 color: #555;
 }
 
-.ulMenu > ul > li > a span span {
+.ulMenu > ul > li > a span .cnt {
 background: #0078AB;
-padding: 2px;
+padding: 2px 6px;
 border-radius: 7px;
+margin-right: -6px;
 color: #fff;
-margin-left: 10px;
 }
-.ulMenu > ul > li > a:hover span span {
+.ulMenu > ul > li > a:hover span .cnt {
 background: #ED0461;
 }
 

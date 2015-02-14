@@ -91,7 +91,7 @@ font-size: 10px;
 display: inline-block;
 margin-right: 10px;
 }
-h1 {
+h1, h2 {
 font-family: Boblic;
 }
 .header {
@@ -122,6 +122,14 @@ border-top: 1px solid #E8E8E8;
 }
 .col1 input[type=submit] {
 width: 100%;
+}
+
+.colBody.colContent {
+padding: 20px 20px 10px 20px;
+}
+.ddItem .f_text {
+font-size: 20px;
+font-family: Boblic;
 }
 
 /*.col2 .colBody {
@@ -160,12 +168,6 @@ color: #555;
 border-bottom: 1px solid #555;
 }
 
-
-
-
-
-
-
 .apeform .type_file .help {
 float: none;
 }
@@ -175,39 +177,52 @@ height: 15px;
 .apeform .type_submit {
 margin-top: 10px;
 }
-
 .addForm input[type=submit]{
 margin-top: 15px;
 width: 200px;
 height: 30px;
 }
-
-
-
 .colN3 {
 padding-top: 10px;
 }
-#itemsAdd .element {
+
+#itemsAdd .colSet .element {
 float: left;
+position: relative;
+padding-left: 15px;
+}
+#itemsAdd .element.name_titleHeader {
+padding-left: 40px;
 }
 #itemsAdd .element.name_descr .ttl,
 #itemsAdd .element.name_cat .ttl {
 font-size: 11px;
 }
-#itemsAdd .element.name_descr,
-#itemsAdd .element.name_cat {
-}
 #itemsAdd .element.name_cat {
 width: 180px;
 }
 #itemsAdd .element.image {
-margin-top: 22px;
+padding-left: 40px;
+margin-top: 17px;
+}
+#itemsAdd .type_col {
+display: block;
+}
+#itemsAdd img {
+width: 50px;
 }
 #itemsAdd .element.name_descr textarea {
 width: 250px;
-height: 100px;
+height: 50px;
+font-size: 11px;
 }
-
+#itemsAdd .element.name_title {
+width: 400px;
+}
+#itemsAdd .element.name_title input {
+font-size: 20px;
+font-family: Boblic;
+}
 #itemsAdd .hgrp {
 width: 610px;
 margin-left: -1px;
@@ -219,10 +234,9 @@ clear: both;
 #itemsAdd .hgrp_userInfo {
 padding-bottom: 10px;
 }
-.hgrp_userInfo .colBody {
+#itemsAdd .hgrp_userInfo .colBody {
 padding-top: 5px;
 }
-
 #itemsAdd .type_submit {
 padding-bottom: 20px;
 padding-top: 5px;
@@ -230,13 +244,8 @@ padding-top: 5px;
 #itemsAdd .type_submit input {
 padding: 10px 20px;
 }
-
 #itemsAdd {
 padding-top: 10px;
-}
-#itemsAdd .element {
-position: relative;
-padding-left: 25px;
 }
 
 .col2 {
@@ -248,14 +257,16 @@ padding: 10px 30px;
 }
 
 .shortHomeText {
-padding: 10px;
-margin: 10px 5px 5px 5px;
+margin: 10px 2px 5px 5px;
 text-align: center;
-border-radius: 5px;
+}
+.info {
+border-radius: 3px;
+padding: 10px;
 background: #FFECB2;
 border: 1px solid #FFBF00;
 }
-.shortHomeText .btn {
+.btn.basicBtn {
 padding: 3px 10px;
 }
 
@@ -270,11 +281,18 @@ padding: 20px;
 width: 620px;
 }
 .ddItems .item {
-height: 100px;
+height: 125px;
 width: 120px;
 margin-right: 22px;
 display: inline-block;
 }
+.ddItem .f_dateCreate {
+text-align: right;
+font-style: italic;
+font-family: Georgia;
+margin-top: 20px;
+}
+
 .thumbCont img {
 width: 120px;
 }
@@ -311,7 +329,6 @@ float: left;
 width: 237px;
 min-height: 200px;
 background: url(/thm/img/upload-arrow.png) no-repeat top right;
-
 }
 .blockUpload .apeform {
 width: 210px;
@@ -320,8 +337,20 @@ width: 210px;
 .ddItems .item {
 position: relative;
 }
-.ddItems .item .edit {
+.ddItems .item .btns {
 position: absolute;
 top: 10px;
-right: 0px;
+right: 0;
+}
+.ddItems .item .smIcons {
+background: #fff;
+border-radius: 15px;
+padding: 3px;
+}
+.ddItems .item .smIcons:hover {
+background: #FFECB2;
+border-color: #FFBF00;
+}
+.ddItems .item .smIcons.delete {
+
 }

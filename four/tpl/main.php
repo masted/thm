@@ -1,5 +1,5 @@
 <head>
-  <title><?= $d['headerPageTitle'] ?></title>
+  <title><?= $d['pageHeadTitle'] ?></title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <link rel="icon" href="data:;base64,=">
   {sflm}
