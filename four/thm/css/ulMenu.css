@@ -5,11 +5,6 @@ list-style: none;
 margin: 0;
 padding: 0;
 }
-
-.ulMenu {
-
-}
-
 .ulMenu a .tit {
 text-decoration: underline;
 }
@@ -17,7 +12,6 @@ text-decoration: underline;
 display: block;
 float: right;
 }
-
 .ulMenu ul li a {
 display: block;
 padding: 3px 0 3px 0;
@@ -29,7 +23,6 @@ border-bottom: 1px solid #E8E8E8;
 .ulMenu > ul > li > ul {
 margin: 10px 0 10px 0;
 }
-
 .ulMenu ul li a span .tit {
 display: inline-block;
 width: 180px;
@@ -43,12 +36,10 @@ color: #555;
 text-decoration: underline;
 color: #000;
 }
-
 .ulMenu ul li a span .cnt {
 font-size: 9px;
 color: #555;
 }
-
 .ulMenu > ul > li > a span .cnt {
 background: #0078AB;
 padding: 2px 6px;
@@ -59,4 +50,3 @@ color: #fff;
 .ulMenu > ul > li > a:hover span .cnt {
 background: #ED0461;
 }
-

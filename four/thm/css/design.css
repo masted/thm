@@ -14,7 +14,6 @@ color: #0078AB;
 body {
 background: #F4F4F4;
 }
-
 .header a.logo {
 font-family: Kaufmann;
 font-size: 35px;
@@ -31,6 +30,7 @@ text-decoration: none;
 background: center center repeat-y;
 }
 .cTop {
+margin-top: 5px;
 height: 16px;
 background: center center no-repeat;
 }
@@ -56,8 +56,6 @@ background-image: url(/thm/img/cols2-top.png);
 .body.cols2 .cBottom {
 background-image: url(/thm/img/cols2-bottom.png);
 }
-
-
 .header {
 color: #ccc;
 vertical-align: middle;
@@ -97,7 +95,6 @@ font-family: Boblic;
 .header {
 background: #323232;
 }
-
 .col1 .blockInfo img {
 max-width: 200px;
 border-radius: 3px;
@@ -114,140 +111,20 @@ padding-left: 20px;
 .col1 .btn {
 margin: 10px 0 20px;
 }
-
 .col1 .line {
 width: 234px;
 margin-left: 5px;
 border-top: 1px solid #E8E8E8;
 }
-.col1 input[type=submit] {
-width: 100%;
-}
-
 .colBody.colContent {
 padding: 20px 20px 10px 20px;
 }
-.ddItem .f_text {
-font-size: 20px;
-font-family: Boblic;
-}
-
-/*.col2 .colBody {
-padding: 20px 0 20px 25px;
-}
-.col2 .colBody h2 {
-font-size: 20px;
-font-family: Boblic;
-}
-.col2 .colBody h3 {
-font-size: 18px;
-font-family: Boblic;
-}*/
-.bookmarks {
-border-bottom: 1px solid #E8E8E8;
-font-family: Boblic;
-text-align: center;
-font-size: 16px;
-height: 34px;
-margin-botom: 20px;
-}
-.bookmarks a {
-margin: 0 10px;
-text-decoration: none !important;
-color: #B0B0B0;
-padding: 5px 0 10px 0;
-display: inline-block;
-}
-.bookmarks a.sel {
-color: #000;
-box-sizing: content-box;
-border-bottom: 1px solid #000;
-}
-.bookmarks a:hover {
-color: #555;
-border-bottom: 1px solid #555;
-}
-
-.apeform .type_file .help {
-float: none;
-}
-.fileProgress {
-height: 15px;
-}
-.apeform .type_submit {
-margin-top: 10px;
-}
-.addForm input[type=submit]{
+.addForm input[type=submit] {
 margin-top: 15px;
-width: 200px;
-height: 30px;
 }
 .colN3 {
 padding-top: 10px;
 }
-
-#itemsAdd .colSet .element {
-float: left;
-position: relative;
-padding-left: 15px;
-}
-#itemsAdd .element.name_titleHeader {
-padding-left: 40px;
-}
-#itemsAdd .element.name_descr .ttl,
-#itemsAdd .element.name_cat .ttl {
-font-size: 11px;
-}
-#itemsAdd .element.name_cat {
-width: 180px;
-}
-#itemsAdd .element.image {
-padding-left: 40px;
-margin-top: 17px;
-}
-#itemsAdd .type_col {
-display: block;
-}
-#itemsAdd img {
-width: 50px;
-}
-#itemsAdd .element.name_descr textarea {
-width: 250px;
-height: 50px;
-font-size: 11px;
-}
-#itemsAdd .element.name_title {
-width: 400px;
-}
-#itemsAdd .element.name_title input {
-font-size: 20px;
-font-family: Boblic;
-}
-#itemsAdd .hgrp {
-width: 610px;
-margin-left: -1px;
-margin-bottom: 15px;
-padding-bottom: 20px;
-border-bottom: 1px solid #EDEDED;
-clear: both;
-}
-#itemsAdd .hgrp_userInfo {
-padding-bottom: 10px;
-}
-#itemsAdd .hgrp_userInfo .colBody {
-padding-top: 5px;
-}
-#itemsAdd .type_submit {
-padding-bottom: 20px;
-padding-top: 5px;
-}
-#itemsAdd .type_submit input {
-padding: 10px 20px;
-}
-#itemsAdd {
-padding-top: 10px;
-}
-
 .col2 {
 width: 608px;
 margin-left: -1px;
@@ -255,48 +132,15 @@ margin-left: -1px;
 .span-21.col2 .bColBody {
 padding: 10px 30px;
 }
-
-.shortHomeText {
-margin: 10px 2px 5px 5px;
-text-align: center;
-}
 .info {
 border-radius: 3px;
 padding: 10px;
 background: #FFECB2;
 border: 1px solid #FFBF00;
 }
-.btn.basicBtn {
-padding: 3px 10px;
-}
-
-/* content */
 .itemContent, .ddItems {
 padding: 20px;
 }
-/* /content */
-
-
-.ddItems {
-width: 620px;
-}
-.ddItems .item {
-height: 125px;
-width: 120px;
-margin-right: 22px;
-display: inline-block;
-}
-.ddItem .f_dateCreate {
-text-align: right;
-font-style: italic;
-font-family: Georgia;
-margin-top: 20px;
-}
-
-.thumbCont img {
-width: 120px;
-}
-
 a.thumb {
 box-shadow: 0px 1px 2px #888;
 border-radius: 3px;
@@ -308,49 +152,4 @@ background: #FFBF00;
 a.thumb img {
 margin: 3px;
 display: inline-block;
-}
-
-
-.itemContent .thumb img {
-width: 255px;
-}
-
-.itemContent.a {
-width: 260px;
-float: left;
-border-right: 1px solid #EDEDED;
-}
-.itemContent.b {
-width: 200px;
-float: left;
-}
-
-.blockUpload {
-width: 237px;
-min-height: 200px;
-background: url(/thm/img/upload-arrow.png) no-repeat top right;
-}
-.blockUpload .apeform {
-width: 210px;
-}
-
-.ddItems .item {
-position: relative;
-}
-.ddItems .item .btns {
-position: absolute;
-top: 10px;
-right: 0;
-}
-.ddItems .item .smIcons {
-background: #fff;
-border-radius: 15px;
-padding: 3px;
-}
-.ddItems .item .smIcons:hover {
-background: #FFECB2;
-border-color: #FFBF00;
-}
-.ddItems .item .smIcons.delete {
-
 }

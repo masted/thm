@@ -1,0 +1,17 @@
+.blockUpload {
+width: 236px;
+min-height: 200px;
+background: url(/thm/img/upload-arrow.png) no-repeat top right;
+}
+.blockUpload .apeform {
+width: 210px;
+}
+.blockUpload input[type=submit] {
+width: 100%;
+}
+.blockUpload .type_file .help {
+float: none;
+}
+.blockUpload .fileProgress {
+height: 15px;
+}

@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html>
 <head>
   <title><?= $d['pageHeadTitle'] ?></title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -12,6 +14,7 @@
       Ngn.addBtnAction('.auth', function() {
         new Ngn.Dialog.Auth();
       });
+      Ngn.Milkbox.add(document.getElements('a.lightbox'));
     });
   </script>
 </head>
@@ -44,3 +47,4 @@
   <div class="cBottom"></div>
 </div>
 </body>
+</html>

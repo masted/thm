@@ -1,0 +1,24 @@
+.bookmarks {
+border-bottom: 1px solid #E8E8E8;
+font-family: Boblic;
+text-align: center;
+font-size: 16px;
+height: 34px;
+margin-botom: 20px;
+}
+.bookmarks a {
+margin: 0 10px;
+text-decoration: none !important;
+color: #B0B0B0;
+padding: 5px 0 10px 0;
+display: inline-block;
+}
+.bookmarks a.sel {
+color: #000;
+box-sizing: content-box;
+border-bottom: 1px solid #000;
+}
+.bookmarks a:hover {
+color: #555;
+border-bottom: 1px solid #555;
+}
