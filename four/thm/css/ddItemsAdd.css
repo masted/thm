@@ -1,0 +1,61 @@
+#ddItemsAdd .colSet .element {
+float: left;
+position: relative;
+padding-left: 15px;
+}
+#ddItemsAdd .element.name_titleHeader {
+padding-left: 40px;
+}
+#ddItemsAdd .hgrp_userInfo .element,
+#ddItemsAdd .element.type_submit {
+padding-left: 117px;
+}
+#ddItemsAdd .element.name_descr .ttl,
+#ddItemsAdd .element.name_cat .ttl {
+font-size: 11px;
+}
+#ddItemsAdd .element.name_cat {
+width: 380px;
+}
+#ddItemsAdd .element.image {
+padding-left: 40px;
+margin-top: 17px;
+}
+#ddItemsAdd .type_col {
+display: block;
+}
+#ddItemsAdd img {
+width: 50px;
+}
+#ddItemsAdd .element.name_descr textarea {
+width: 250px;
+height: 50px;
+font-size: 11px;
+}
+#ddItemsAdd .element.name_title {
+width: 400px;
+}
+#ddItemsAdd .element.name_title input {
+font-size: 20px;
+font-family: Boblic;
+}
+#ddItemsAdd .hgrp {
+width: 610px;
+margin-left: -1px;
+margin-bottom: 10px;
+padding-bottom: 10px;
+border-bottom: 1px solid #EDEDED;
+clear: both;
+}
+#ddItemsAdd .hgrp_userInfo {
+padding-bottom: 10px;
+}
+#ddItemsAdd .hgrp_userInfo .colBody {
+padding-top: 5px;
+}
+#ddItemsAdd .type_submit {
+padding-bottom: 20px;
+}
+#ddItemsAdd {
+padding-top: 10px;
+}
