@@ -26,6 +26,7 @@
       <? if ($d['menu']) $this->tpl('cp/links', $d['menu']) ?>
     </div>
     <div class="personal">
+      <?/*<?= Misc::formatPrice(memory_get_usage()) ?>&nbsp;&nbsp;&nbsp;*/?>
       <? if ($id = Auth::get('id')) { ?>
         <div class="login"><?= UsersCore::getTitle($id) ?></div>
         <a href="?logout=1">Выход</a>

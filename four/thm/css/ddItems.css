@@ -1,0 +1,14 @@
+.element.t_url img {
+vertical-align: middle;
+margin-right: 3px;
+display: inline-block;
+}
+.ddItems.list .element {
+margin-bottom: 10px;
+}
+.ddItems.list .line {
+margin-top: 10px;
+margin-bottom: 15px;
+width: 609px;
+margin-left: -20px;
+}

@@ -1,4 +1,4 @@
-<div class="span-21 col2">
+<div class="span-21 col0">
   <div class="bColBody">
     <? $this->tpl($d['tpl'], $d) ?>
   </div>

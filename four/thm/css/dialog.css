@@ -1,0 +1,17 @@
+.mid-float-box, .dialog-footer .foot-wrap {
+background: #FAFAFA;
+}
+.dialog-tabs .md-title-text a {
+background: #D6D6D6;
+}
+#auth_dialog .apeform input {
+font-family: Boblic;
+padding: 3px;
+font-size: 16px;
+}
+.dialog-title {
+margin: 0;
+border-top-right-radius: 7px;
+border-top-left-radius: 7px;
+padding-left: 10px;
+}
