@@ -7,6 +7,7 @@
   {sflm}
   <link rel="stylesheet" type="text/css" href="/thm/css/design.css" media="screen, projection"/>
   <link rel="stylesheet" type="text/css" href="/thm/css/ulMenu.css" media="screen, projection"/>
+  <script src="/i/js/tiny_mce/tiny_mce.js"></script>
   <script>
     Ngn.authorized = <?= Auth::get('id') ?: 'false' ?>;
     Ngn.isAdmin  = <?= Misc::isAdmin() ? 'true' : 'false' ?>;
