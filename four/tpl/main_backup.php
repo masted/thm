@@ -4,7 +4,6 @@
   <title><?= $d['pageHeadTitle'] ?></title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <link rel="icon" href="data:;base64,=">
-  <? if (!$d['mobile']) { ?>
   {sflm}
   <link rel="stylesheet" type="text/css" href="/thm/css/design.css" media="screen, projection"/>
   <link rel="stylesheet" type="text/css" href="/thm/css/ulMenu.css" media="screen, projection"/>
@@ -19,9 +18,6 @@
       Ngn.Milkbox.add(document.getElements('a.lightbox'));
     });
   </script>
-  <? } else { ?>
-    <link rel="stylesheet" type="text/css" href="/thm/mobile/main.css" media="screen, projection"/>
-  <? } ?>
 </head>
 <body>
 <div class="header">
