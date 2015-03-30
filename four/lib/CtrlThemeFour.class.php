@@ -4,7 +4,15 @@ abstract class CtrlThemeFour extends CtrlCommon {
 
   abstract protected function themeFourModule();
 
+  /**
+   * @return Req
+   */
+  public function originalReq() {
+    return isset($this->router->options['originalReq']) ? $this->router->options['originalReq'] : $this->req;
+  }
+
   protected function init() {
+    $this->d['basePath'] = isset($this->originalReq()->params[0]) ? '/'.$this->originalReq()->params[0].'/' : '/';
     $this->d['layout'] = 'cols1';
     Sflm::frontend('css')->addLib('icons');
     Sflm::frontend('css')->addFolder(WEBROOT_PATH.'/m/css');
