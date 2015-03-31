@@ -6,10 +6,10 @@ class ThmFourRouterManager extends RouterManager {
     $req = O::get('Req');
     $firstParam = (isset($req->params[0]) and isset(ThmFourModule::$names[$req->params[0]])) ? $req->params[0] : null;
     foreach (ThmFourModule::$names as $fourModule) {
-      Lib::addFolder(NGN_ENV_PATH.'/thm-modules/'.$fourModule.'/lib');
+      Lib::addFolder(NGN_ENV_PATH.'/thm-four-modules/'.$fourModule.'/lib');
     }
     $fourModule = ThmFourModule::$names[$firstParam];
-    Ngn::addBasePath(NGN_ENV_PATH.'/thm-modules/'.$fourModule, 4, $fourModule);
+    Ngn::addBasePath(NGN_ENV_PATH.'/thm-four-modules/'.$fourModule, 4, $fourModule);
     $routerClass = ucfirst($fourModule).'Router';
     if (!class_exists($routerClass)) $routerClass = 'DefaultRouter';
     if ($firstParam) {

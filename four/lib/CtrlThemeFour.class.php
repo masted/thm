@@ -19,8 +19,8 @@ abstract class CtrlThemeFour extends CtrlCommon {
     Sflm::frontend('css')->addLib('icons');
     Sflm::frontend('css')->addFolder(WEBROOT_PATH.'/m/css');
     Sflm::frontend('css')->addFolder(NGN_ENV_PATH.'/thm/four/thm/css');
-    Sflm::frontend('css')->addFolder(NGN_ENV_PATH.'/thm-modules/'.$this->themeFourModule().'/m/css');
-    Sflm::frontend('js', 'default')->addLib('m/js/init.js');
+    Sflm::frontend('css')->addFolder(NGN_ENV_PATH.'/thm-four-modules/'.$this->themeFourModule().'/m/css');
+    Sflm::frontend('js')->addLib('m/js/init.js');
     $this->d['mobile'] = Misc::hasPrefix('m.', $_SERVER['HTTP_HOST']);
   }
 
