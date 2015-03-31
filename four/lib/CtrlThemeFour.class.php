@@ -12,7 +12,10 @@ abstract class CtrlThemeFour extends CtrlCommon {
   }
 
   protected function init() {
-    $this->d['basePath'] = isset($this->originalReq()->params[0]) ? '/'.$this->originalReq()->params[0].'/' : '/';
+    $this->d['basePath'] = ThmFourModule::$basePaths[$this->themeFourModule()];
+    if ($this->d['basePath']) $this->d['basePath'] = '/'.$this->d['basePath'];
+    else $this->d['basePath'] = '';
+    //die2($this->d['basePath']);
     $this->d['layout'] = 'cols1';
     Sflm::frontend('css')->addLib('icons');
     Sflm::frontend('css')->addFolder(WEBROOT_PATH.'/m/css');
