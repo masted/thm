@@ -15,12 +15,12 @@ abstract class CtrlThemeFour extends CtrlCommon {
     $this->d['basePath'] = ThmFourModule::$basePaths[$this->themeFourModule()];
     if ($this->d['basePath']) $this->d['basePath'] = '/'.$this->d['basePath'];
     else $this->d['basePath'] = '';
-    //die2($this->d['basePath']);
     $this->d['layout'] = 'cols1';
     Sflm::frontend('css')->addLib('icons');
     Sflm::frontend('css')->addFolder(WEBROOT_PATH.'/m/css');
     Sflm::frontend('css')->addFolder(NGN_ENV_PATH.'/thm/four/thm/css');
     Sflm::frontend('css')->addFolder(NGN_ENV_PATH.'/thm-modules/'.$this->themeFourModule().'/m/css');
+    Sflm::frontend('js', 'default')->addLib('m/js/init.js');
     $this->d['mobile'] = Misc::hasPrefix('m.', $_SERVER['HTTP_HOST']);
   }
 

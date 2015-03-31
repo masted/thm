@@ -48,7 +48,7 @@
   <? } ?>
   <div class="cTop"></div>
   <div class="cBody">
-    <? $this->tpl($d['layout'], $d) ?>
+    <? $this->tpl($d['layout'], $d, false, false, 'layout') ?>
   </div>
   <div class="cBottom">
   </div>
