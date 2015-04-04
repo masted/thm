@@ -23,12 +23,28 @@ font-size: 30px;
 margin: 5px;
 margin-top: 7px;
 margin-left: 20px;
-margin-right: 50px;
-display: inline-block;
+margin-right: 10px;
+display: block;
+float: left;
 text-decoration: none;
 }
 .header a:hover.logo {
 text-decoration: none;
+}
+.header a.section {
+display: block;
+float: left;
+font-size: 15px;
+text-transform: uppercase;
+font-family: Boblic;
+padding: 3px 5px 0px 5px;
+background: #ED0461;
+color: #fff;
+text-decoration: none;
+}
+.header a.section:hover {
+color: #fff;
+text-decoration: underline;
 }
 .cBody {
 background: center center repeat-y;
@@ -43,7 +59,7 @@ height: 16px;
 background: center center no-repeat;
 }
 .body.cols1 .cBody {
-background-image: url(/thm/img/cols1-middle.png) -10px 0;
+background-image: url(/thm/img/cols1-middle.png);
 }
 .body.cols1 .cTop {
 background-image: url(/thm/img/cols1-top.png);
@@ -77,6 +93,8 @@ display: inline-block;
 margin: 15px 0;
 }
 .header .menu {
+position: absolute;
+left: 237px;
 font-size: 15px;
 display: inline-block;
 vertical-align: top;

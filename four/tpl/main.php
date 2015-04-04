@@ -27,6 +27,7 @@
 <div class="header">
   <div class="container">
     <a href="/" class="logo"><?= SITE_TITLE ?></a>
+    <a href="<?= $d['basePath'] ?>" class="section"><?= $d['sectionTitle'] ?></a>
     <div class="menu">
       <? if ($d['menu']) $this->tpl('cp/links', $d['menu']) ?>
     </div>

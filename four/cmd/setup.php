@@ -7,7 +7,7 @@ foreach (ThmFourModule::$names as $fourModule) {
   foreach ($structures as $strName => $fields) {
     try {
       DdStructureCore::create($strName, $fields);
-      print "Structure '$strName' created\n";
+      print Cli::colored("Structure '$strName' created\n", 'lightCyan');
     } catch (AlreadyExistsException $e) {
       print "Structure '$strName' exists\n";
     }
