@@ -25,6 +25,10 @@ abstract class CtrlThemeFour extends CtrlCommon {
     $this->d['menu'] = Config::getVar('menu', true);
   }
 
+  function oProcessForm(DdForm $form) {
+    $form->options['deleteFileUrl'] = $this->d['basePath'].'?a=deleteFile';
+  }
+
   protected function afterAction() {
     if ($this->d['mobile']) $this->d['layout'] = 'cols1';
   }
