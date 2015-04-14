@@ -7,7 +7,7 @@ class ThmFourModule {
   static function init($name, $baseParam = null) {
     self::$names[$baseParam] = $name;
     self::$basePaths[$name] = $baseParam;
-    Ngn::addBasePath(NGN_ENV_PATH.'/thm-four-modules/'.$name);
+    Ngn::addBasePath(NGN_ENV_PATH.'/thm-four-modules/'.$name, 3);
   }
 
 }
