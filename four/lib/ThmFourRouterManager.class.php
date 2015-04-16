@@ -8,7 +8,7 @@ class ThmFourRouterManager extends RouterManager {
     $fourModule = ThmFourModule::$names[$firstParam];
     Ngn::addBasePath(NGN_ENV_PATH.'/thm-four-modules/'.$fourModule, 4, $fourModule);
     $routerClass = ucfirst($fourModule).'Router';
-    if (!class_exists($routerClass)) $routerClass = 'DefaultRouter';
+    if (!class_exists($routerClass)) $routerClass = 'ThmFourRouter';
     if ($firstParam) {
       return new $routerClass([
         'originalReq' => $req,

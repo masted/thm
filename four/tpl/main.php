@@ -20,7 +20,7 @@
     });
   </script>
   <? } else { ?>
-    <link rel="stylesheet" type="text/css" href="/thm/mobile/main.css" media="screen, projection"/>
+  {sflm}
   <? } ?>
 </head>
 <body>

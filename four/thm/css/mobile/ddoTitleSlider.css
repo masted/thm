@@ -1,0 +1,21 @@
+﻿.ddItems .f_title {
+background: url(/i/img/black/arrow-right.gif) no-repeat center right;
+}
+.ddItems .item:active {
+text-decoration: underline;
+}
+.cBody {
+float: left;
+}
+.pages {
+}
+.hBackBtn {
+float: right;
+width: 30px;
+height: 30px;
+background: url(/i/img/white/arrow-left.png) no-repeat center center;
+border: 2px solid #fff;
+border-radius: 30px;
+margin-top: -8px;
+margin-top: -8px;
+}
