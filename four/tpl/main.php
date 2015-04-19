@@ -20,9 +20,7 @@
     });
   </script>
   <? } else { ?>
-    <link rel="stylesheet" type="text/css" href="/thm/css/mobile/design.css" media="screen, projection"/>
-    <link rel="stylesheet" type="text/css" href="/thm/css/mobile/ddoTitleSlider.css" media="screen, projection"/>
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
   {sflm}
   <? } ?>
 </head>
