@@ -1,14 +1,23 @@
 .header {
-position: fixed;
 background: #000;
 height: 50px;
+}
+.header .title {
+width: 190px;
+float: left;
+color: #fff;
+}
+.cBodyPad {
+padding: 10px;
 }
 .container.body {
 padding-top: 50px;
 }
+/*
 .personal, .menu, .logo {
 display: inline-block;
 }
+*/
 .header a {
 color: #fff;
 }
@@ -23,13 +32,39 @@ font-size: 13px;
 .container {
 width: 240px;
 }
-.ddItems .item {
-padding-left: 20px;
-padding-right: 20px;
-margin-bottom: 20px;
-padding-bottom: 20px;
+.ddItems * {
+margin: 0;
+}
+.ddItems .item, .menu a {
+padding: 10px;
+background: url(/i/img/black/arrow-right.gif) no-repeat center right;
 border-bottom: 1px solid #ccc;
 }
+
+.menu a {
+display: block;
+}
+
+
+
+.ddItems .item:active {
+text-decoration: underline;
+}
+.cBody {
+float: left;
+height: 400px;
+overflow-y: auto;
+}
+
+.hBackBtn {
+float: right;
+width: 50px;
+height: 50px;
+background: #555 url(/i/img/white/arrow-left.png) no-repeat center center;
+}
+
+
+
 .apeform input, .apeform textarea {
 border: 0;
 font-size: 20px;

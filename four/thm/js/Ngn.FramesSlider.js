@@ -7,19 +7,16 @@ Ngn.FramesSlider = new Class({
     duration: 300
   },
   oneTimeCompleteAction: false,
-  initialize: function(container, options) {
+  frameN: 0,
+  initialize: function(framesContainer, options) {
     this.setOptions(options);
-    this.container = container;
-    this.frameWidth = this.options.frameWidth || this.container.getSize().x;
-    this.frames = this.container.getElements('.' + this.options.frameCssClass);
-    c(this.container);
-    c(this.frames);
+    this.framesContainer = framesContainer;
+    this.frameWidth = this.options.frameWidth || this.framesContainer.getSize().x;
+    this.frames = this.framesContainer.getElements('.' + this.options.frameCssClass);
     this.eFrames = new Element('div', {'class': 'frames'}).
-      inject(this.container).
+      inject(this.framesContainer).
       adopt(this.frames);
     this.initFramesWidth();
-    //this.container.setStyle('width', this.frameWidth + 'px');
-    //this.container.setStyle('overflow', 'hidden');
     this.status = 0;
     this.fx = new Fx.Tween(this.eFrames, {
       property: 'margin-left',
@@ -52,13 +49,16 @@ Ngn.FramesSlider = new Class({
   getCurrPos: function() {
     return parseInt(this.eFrames.getStyle('margin-left'));
   },
-  next: function() {
+  next: function(onComplete) {
     if (this.status) return;
+    this.oneTimeCompleteAction = onComplete;
+    this.frameN++;
     this.fx.start(this.getCurrPos(), this.getCurrPos() - this.frameWidth);
   },
   prev: function(onComplete) {
     if (this.status) return;
     this.oneTimeCompleteAction = onComplete;
+    this.frameN--;
     this.fx.start(this.getCurrPos(), this.getCurrPos() + this.frameWidth);
   },
   // frames manager
@@ -76,6 +76,6 @@ Ngn.FramesSlider = new Class({
     this.frames[this.frames.length-1].dispose();
     this.frames.pop();
     this.initFramesWidth();
-  },
+  }
 
 });
