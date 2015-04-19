@@ -4,7 +4,7 @@ Ngn.FramesSlider = new Class({
     frameCssClass: 'frame',
     frameWidth: null,
     transition: Fx.Transitions.Linear,
-    duration: 700
+    duration: 300
   },
   oneTimeCompleteAction: false,
   initialize: function(container, options) {
@@ -12,7 +12,11 @@ Ngn.FramesSlider = new Class({
     this.container = container;
     this.frameWidth = this.options.frameWidth || this.container.getSize().x;
     this.frames = this.container.getElements('.' + this.options.frameCssClass);
-    this.eFrames = new Element('div', {'class': 'frames'}).inject(this.container).adopt(this.frames);
+    c(this.container);
+    c(this.frames);
+    this.eFrames = new Element('div', {'class': 'frames'}).
+      inject(this.container).
+      adopt(this.frames);
     this.initFramesWidth();
     //this.container.setStyle('width', this.frameWidth + 'px');
     //this.container.setStyle('overflow', 'hidden');

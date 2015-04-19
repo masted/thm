@@ -10,7 +10,8 @@ Ngn.DdoTitleSlider = new Class({
         framesSlider.popFrame();
       });
     });
-    backBtn.setStyle('visibility', 'hidden');
+    document.getElement('.header').setStyle('width', framesSlider.frameWidth + 'px');
+    //backBtn.setStyle('visibility', 'hidden');
     // titles navigation
     var secondPages = {};
     document.getElements('.ddItems .item').each(function(eItem) {
