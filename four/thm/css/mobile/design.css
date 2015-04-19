@@ -29,6 +29,10 @@ font-family: verdana, arial, helvetica, sans-serif;
 h2 {
 font-size: 13px;
 }
+
+.pages {
+overflow-x: hidden;
+}
 .container {
 
 }
@@ -52,7 +56,7 @@ text-decoration: underline;
 }
 .cBody {
 float: left;
-height: 400px;
+height: 200px;
 overflow-y: auto;
 }
 
