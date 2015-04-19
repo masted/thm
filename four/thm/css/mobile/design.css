@@ -10,10 +10,10 @@ color: #fff;
 .cBodyPad {
 padding: 10px;
 }
+/*
 .container.body {
 padding-top: 50px;
 }
-/*
 .personal, .menu, .logo {
 display: inline-block;
 }
@@ -30,7 +30,7 @@ h2 {
 font-size: 13px;
 }
 .container {
-width: 240px;
+
 }
 .ddItems * {
 margin: 0;
