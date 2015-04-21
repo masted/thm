@@ -8,7 +8,9 @@ Ngn.DdoTitleSlider = new Class({
     this.initMainMenu();
     this.initBackBtn();
     this.toggleBackBtn();
+    this.framesSlider.fx.addEvent('start', this.toggleBackBtn.bind(this));
     this.initDdoNavigation();
+    var title = document.getElement('.header .title');
   },
 
   initMainMenu: function() {
@@ -24,10 +26,7 @@ Ngn.DdoTitleSlider = new Class({
     this.backBtn = new Element('div', {
       'class': 'hBackBtn'
     }).inject(document.getElement('.header .container')).addEvent('click', function() {
-      // this.setStyle('visibility', 'hidden');
-      this.framesSlider.prev(function() {
-        // this.framesSlider.popFrame();
-      }.bind(this));
+      this.framesSlider.prev();
     }.bind(this));
   },
 
@@ -38,10 +37,12 @@ Ngn.DdoTitleSlider = new Class({
   initDdoNavigation: function() {
     var secondPages = {};
     this.framesSlider.pushFrame('');
+    this.framesSlider.next();
     document.getElements('.ddItems .item').each(function(eItem) {
       var id = eItem.get('data-id');
       eItem.addEvent('click', function() {
-        this.framesSlider.frames[2].set('html', '<div class="cBodyPad">' + secondPages[id].get('html') + '</div>');
+        var title = eItem.getElement('.f_title').get('text')
+        this.framesSlider.setFrameHtml(2, '<div class="bookmarks">' + title + '</div><div class="cBodyPad">' + secondPages[id].get('html') + '</div>');
         this.framesSlider.next(this.toggleBackBtn.bind(this));
       }.bind(this));
       var pageContainer = new Element('div', {'class': 'pageContainer'});

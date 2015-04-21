@@ -5,40 +5,60 @@ Ngn.FramesSlider.MapContents = new Class({
     map: {}
   },
 
-  mapStorage: {},
-
   initialize: function(rootContainer, framesContainer, options) {
     this.parent(framesContainer, options);
     this.rootContainer = rootContainer;
-    for (var frameN=0; frameN<this.frames.length; frameN++) {
-      this.addFrameStorageMap(frameN);
-    }
     this.fx.addEvent('start', function() {
-      c('MOVE TO: ' + this.frameN);
-      if (this.mapStorage[this.frameN]) {
-        for (var selector in this.mapStorage[this.frameN]) {
-          this.rootContainer.getElement(selector).set('html', this.mapStorage[this.frameN][selector]);
-        }
-      }
+      this.setTargetHtml(false);
     }.bind(this));
   },
 
-  addFrameStorageMap: function(frameN) {
+  sourceStorage: {},
+
+  _getSourceHtml: function(frameN, sourceSelector, force) {
+    var id = frameN + sourceSelector;
+    if (!force && this.sourceStorage[id] !== undefined) {
+      return this.sourceStorage[id];
+    }
+    c(frameN);
+    var el = this.frames[frameN].getElement(sourceSelector);
+    if (!el) {
+      return this.sourceStorage[id] = false;
+    }
+    this.sourceStorage[id] = el.get('html');
+    el.dispose();
+    return this.sourceStorage[id];
+  },
+
+  getSourceHtml: function(sourceSelector) {
+    return this._getSourceHtml(this.frameN, sourceSelector, false);
+  },
+
+  setTargetHtml: function() {
     for (var selector in this.options.map) {
-      var el = this.frames[frameN].getElement(selector);
-      if (!this.mapStorage[frameN]) this.mapStorage[frameN] = {};
-      if (!el) {
-        this.mapStorage[frameN][this.options.map[selector]] = '';
-        return;
-      }
-      this.mapStorage[frameN][this.options.map[selector]] = el.get('html');
-      el.dispose();
+      this.__setTargetHtml(
+        this.rootContainer.getElement(this.options.map[selector]),
+        this.getSourceHtml(selector)
+      );
     }
   },
 
-  pushFrame: function(html) {
-    this.parent(html);
-    this.addFrameStorageMap(this.frames.length - 1);
+  _setTargetHtml: function(frameN) {
+    for (var selector in this.options.map) {
+      this.__setTargetHtml(
+        this.rootContainer.getElement(this.options.map[selector]),
+        this._getSourceHtml(frameN, selector, true)
+      );
+    }
+  },
+
+  __setTargetHtml: function(target, html) {
+    target.set('html', html === false ? '' : html);
+  },
+
+  setFrameHtml: function(frameN, html) {
+    this.frames[frameN].set('html', html);
+    this._setTargetHtml(frameN);
   }
 
 });
