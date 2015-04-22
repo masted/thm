@@ -33,6 +33,7 @@
     <div class="menu">
       <? if ($d['menu']) $this->tpl('cp/links', $d['menu']) ?>
     </div>
+    <a href="http://m.<?= SITE_DOMAIN ?>" style="position:absolute;right:150px;top: 0px;"><img title="Мобильная версия" style="width:50%" src="http://www.moneymt.co.uk/wp-content/themes/mau/images/c_header_mobile.png"></a>
     <? } ?>
     <? if (!$d['mobile']) { ?>
     <div class="personal">
