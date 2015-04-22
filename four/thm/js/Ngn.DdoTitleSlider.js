@@ -11,12 +11,12 @@ Ngn.DdoTitleSlider = new Class({
     this.setOptions(options);
     this.framesSlider = framesSlider;
     document.getElement('.header').setStyle('width', this.framesSlider.frameWidth + 'px');
-    this.initMainMenu();
+    //this.initMainMenu();
     this.initBackBtn();
     this.toggleBackBtn();
     this.framesSlider.fx.addEvent('start', this.toggleBackBtn.bind(this));
     this.initDdoNavigation();
-    var title = document.getElement('.header .title');
+    this.framesSlider._setTargetHtml(0);
   },
 
   initMainMenu: function() {
@@ -43,12 +43,12 @@ Ngn.DdoTitleSlider = new Class({
   initDdoNavigation: function() {
     var secondPages = {};
     this.framesSlider.pushFrame('');
-    this.framesSlider.next();
+    //this.framesSlider.next();
     document.getElements('.ddItems .item').each(function(eItem) {
       var id = eItem.get('data-id');
       eItem.addEvent('click', function() {
         var title = eItem.getElement('.f_title').get('text')
-        this.framesSlider.setFrameHtml(2, '<div class="bookmarks">' + title + '</div><div class="cBodyPad">' + secondPages[id].get('html') + '</div>');
+        this.framesSlider.setFrameHtml(1, '<div class="bookmarks">' + title + '</div><div class="cBodyPad">' + secondPages[id].get('html') + '</div>');
         this.framesSlider.next(this.toggleBackBtn.bind(this));
       }.bind(this));
       var pageContainer = new Element('div', {'class': 'pageContainer'});
