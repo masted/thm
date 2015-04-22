@@ -1,3 +1,8 @@
+
+.subscript {
+display: inline-block;
+font-size: 13px;
+}
 .header {
 background: #000;
 height: 40px;
@@ -91,4 +96,19 @@ border-bottom: 1px solid #ccc;
 .apeform .element p {
 margin: 0;
 margin-bottom: 3px;
+}
+
+
+
+
+
+.ddItems.str_afisha .f_eventDate {
+display: inline-block;
+}
+.ddItems.str_afisha .f_eventTime {
+display: inline-block;
+}
+.ddItems.str_afisha .f_price {
+display: inline-block;
+margin-left: 20px;
 }

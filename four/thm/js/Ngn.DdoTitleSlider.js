@@ -1,8 +1,14 @@
 Ngn.DdoTitleSlider = new Class({
+  Implements: Options,
+
+  options: {
+    subscriptFields: []
+  },
 
   backBtn: null,
 
-  initialize: function(framesSlider) {
+  initialize: function(framesSlider, options) {
+    this.setOptions(options);
     this.framesSlider = framesSlider;
     document.getElement('.header').setStyle('width', this.framesSlider.frameWidth + 'px');
     this.initMainMenu();
@@ -49,10 +55,22 @@ Ngn.DdoTitleSlider = new Class({
       var els = eItem.getElements('.element');
       for (var i=0; i<els.length; i++) {
         if (els[i].hasClass('f_title')) continue;
+        if (this.isSubscriptField(els[i])) {
+          els[i].clone().inject(pageContainer);
+          els[i].addClass('subscript');
+          continue;
+        }
         els[i].inject(pageContainer);
       }
       secondPages[id] = pageContainer;
     }.bind(this));
+  },
+
+  isSubscriptField: function(el) {
+    for (var j=0; j<this.options.subscriptFields.length; j++) {
+      if (el.hasClass('f_' + this.options.subscriptFields[j])) return true;
+    }
+    return false;
   }
 
 });

@@ -53,11 +53,13 @@
   <? } ?>
   <div class="cTop"></div>
   <div class="pages">
+    <? if ($d['mobile']) { ?>
     <div class="cBody">
       <div class="menu">
         <? if ($d['menu']) $this->tpl('cp/links', $d['menu']) ?>
       </div>
     </div>
+    <? } ?>
     <div class="cBody">
       <? $this->tpl($d['layout'], $d, false, false, 'layout') ?>
     </div>
