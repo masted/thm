@@ -1,6 +1,6 @@
 <?php
 
-abstract class CtrlThemeFour extends CtrlCommon {
+abstract class CtrlThemeFour extends CtrlDefault {
 
   abstract protected function themeFourModule();
 
