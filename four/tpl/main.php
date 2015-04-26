@@ -66,6 +66,7 @@
     </div>
   </div>
   <div class="cBottom">
+    <? $this->tpl('counters', null, true) ?>
   </div>
 </div>
 </body>
