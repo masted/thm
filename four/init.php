@@ -12,3 +12,4 @@ require_once MORE_PATH.'/lib/common/RouterCommon.class.php';
 require_once MORE_PATH.'/lib/common/RouterScripts.class.php';
 require __DIR__.'/lib/ThmFourRouterManager.class.php';
 O::replaceInjection('RouterManager', 'ThmFourRouterManager');
+Sflm::$absBasePaths['thm'] = __DIR__.'/thm';

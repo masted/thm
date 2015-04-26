@@ -27,13 +27,14 @@ margin-right: 10px;
 display: block;
 float: left;
 text-decoration: none;
+background: url(/thm/img/sm_logo.png) no-repeat;
+padding-left: 45px;
 }
 .header a:hover.logo {
 text-decoration: none;
 }
 .header a.section {
 display: block;
-float: left;
 font-size: 15px;
 text-transform: uppercase;
 font-family: Boblic;
@@ -41,6 +42,11 @@ padding: 3px 5px 0px 5px;
 background: #ED0461;
 color: #fff;
 text-decoration: none;
+}
+.header .sectionWrapper {
+float: left;
+padding-right: 4px;
+background: url(/thm/img/section-shadow.png) no-repeat top right;
 }
 .header a.section:hover {
 color: #fff;
@@ -82,7 +88,6 @@ vertical-align: middle;
 }
 .header a {
 color: #ccc;
-margin-right: 20px;
 }
 .header a:hover {
 color: #ED0461;
@@ -90,7 +95,6 @@ color: #ED0461;
 .header img {
 vertical-align: middle;
 display: inline-block;
-margin: 15px 0;
 }
 .header .menu {
 position: absolute;
@@ -102,10 +106,19 @@ margin-left: 15px;
 margin-top: 17px;
 font-family: Boblic;
 }
+.header .menu a {
+margin-right: 20px;
+}
 .header .personal {
 float: right;
-margin-top: 20px;
+margin-top: 7px;
 font-size: 10px;
+}
+.header .personal .avatar {
+width: 35px;
+height: 35px;
+border-radius: 35px;
+margin-right: 10px;
 }
 .header .personal .login {
 display: inline-block;

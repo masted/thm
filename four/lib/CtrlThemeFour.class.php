@@ -15,6 +15,10 @@ abstract class CtrlThemeFour extends CtrlDefault {
     $this->d['basePath'] = ThmFourModule::$basePaths[$this->themeFourModule()];
     if ($this->d['basePath']) $this->d['basePath'] = '/'.$this->d['basePath'];
     else $this->d['basePath'] = '';
+    if (Auth::get('id')) {
+      $this->d['profile'] = (new DdItems('profile'))->getItemByField('userId', Auth::get('id'));
+    }
+    //die2($this->d['profile']);
     $this->d['mobile'] = ThmFourRouter::isMobile();
     Sflm::$absBasePaths['thm'] = NGN_ENV_PATH.'/thm/four/thm';
     $this->d['menu'] = Config::getVar('menu', true);

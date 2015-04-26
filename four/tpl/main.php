@@ -6,8 +6,6 @@
   <link rel="icon" href="data:;base64,=">
   <? if (!$d['mobile']) { ?>
   {sflm}
-  <link rel="stylesheet" type="text/css" href="/thm/css/design.css" media="screen, projection"/>
-  <link rel="stylesheet" type="text/css" href="/thm/css/ulMenu.css" media="screen, projection"/>
   <script src="/i/js/tiny_mce/tiny_mce.js"></script>
   <script>
     Ngn.authorized = <?= Auth::get('id') ?: 'false' ?>;
@@ -25,23 +23,29 @@
   <? } ?>
 </head>
 <body>
+
+<link rel="stylesheet" type="text/css" href="/thm/css/design.css" media="screen, projection"/>
+
 <div class="header">
   <div class="container">
     <? if (!$d['mobile']) { ?>
     <a href="/" class="logo"><?= SITE_TITLE ?></a>
-    <a href="<?= $d['basePath'] ?>" class="section"><?= $d['sectionTitle'] ?></a>
+    <div class="sectionWrapper"><a href="<?= $d['basePath'] ?>" class="section"><?= $d['sectionTitle'] ?></a></div>
     <div class="menu">
       <? if ($d['menu']) $this->tpl('cp/links', $d['menu']) ?>
     </div>
-    <a href="http://m.<?= SITE_DOMAIN ?>" style="position:absolute;right:150px;top: 0px;"><img title="Мобильная версия" style="width:50%" src="http://www.moneymt.co.uk/wp-content/themes/mau/images/c_header_mobile.png"></a>
+    <?/*<a href="http://m.<?= SITE_DOMAIN ?>" style="position:absolute;right:150px;top: 0px;"><img title="Мобильная версия" style="width:50%" src="http://www.moneymt.co.uk/wp-content/themes/mau/images/c_header_mobile.png"></a>*/?>
     <? } ?>
     <? if (!$d['mobile']) { ?>
     <div class="personal">
       <? if ($id = Auth::get('id')) { ?>
-        <div class="login"><?= UsersCore::getTitle($id) ?></div>
+        <? if ($d['profile']['sm_image']) { ?>
+          <img src="<?= $d['profile']['sm_image'] ?>" class="avatar" />
+        <? } ?>
+        <div class="login pseudoLink" id="login"><?= UsersCore::getTitle($id) ?></div>
+        <script>$('login').addEvent('click', Ngn.ThmFour.Profile.openEditDialog);</script>
         <a href="?logout=1">Выход</a>
-      <? }
-      else { ?>
+      <? } else { ?>
         <a href="#" class="auth">Войти</a>
       <? } ?>
     </div>
