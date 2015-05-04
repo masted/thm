@@ -1,0 +1,17 @@
+.bColBody {
+position: relative;
+}
+.pNums {
+position: absolute;
+top: -1px;
+right: 9px;
+}
+.pNums a, .pNums b {
+border: 1px solid #ccc;
+border-radius: 10px;
+text-align: center;
+display: inline-block;
+width: 11px;
+height: 13px;
+padding: 5px;
+}
