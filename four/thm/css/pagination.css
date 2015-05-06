@@ -8,10 +8,14 @@ right: 9px;
 }
 .pNums a, .pNums b {
 border: 1px solid #ccc;
-border-radius: 10px;
+font-size: 10px;
+border-radius: 13px;
 text-align: center;
 display: inline-block;
-width: 11px;
+width: 13px;
 height: 13px;
 padding: 5px;
+}
+.pNums b {
+border-color: #555;
 }
