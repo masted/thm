@@ -6,6 +6,9 @@ font-size: 16px;
 height: 34px;
 margin-botom: 20px;
 }
+.bookmarks h1 {
+font-size: 16px;
+}
 .bookmarks a {
 margin: 0 10px;
 text-decoration: none !important;

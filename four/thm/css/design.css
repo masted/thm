@@ -160,7 +160,7 @@ border-top: 1px solid #E8E8E8;
 width: 234px;
 margin-left: 5px;
 }
-.colBody.colContent {
+.colBody.colContent, .colBodyContent {
 padding: 20px 20px 10px 20px;
 }
 .addForm input[type=submit] {
