@@ -8,3 +8,12 @@ width: 609px;
 margin-left: -20px;
 clear: both;
 }
+.noItems {
+background: url(/thm/img/no-data.png) no-repeat center center;
+text-align: center;
+margin-top: 20px;
+padding-top: 90px;
+padding-bottom: 90px;
+color: #9E9E9E;
+line-height: 170%;
+}

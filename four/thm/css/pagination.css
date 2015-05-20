@@ -16,6 +16,6 @@ width: 13px;
 height: 13px;
 padding: 5px;
 }
-.pNums b {
+.pNums b, .pNums a:hover {
 border-color: #555;
 }
