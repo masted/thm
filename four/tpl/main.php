@@ -52,6 +52,11 @@
     <? } ?>
   </div>
 </div>
+<? if ($d['submenu']) { ?>
+<div class="container submenu">
+  <? $this->tpl('cp/links', $d['submenu']) ?>
+</div>
+<? } ?>
 <div class="container body <?= $d['layout'] ?>">
   <? if ($d['topTpl']) { ?>
     <? $this->tpl($d['topTpl'], $d) ?>

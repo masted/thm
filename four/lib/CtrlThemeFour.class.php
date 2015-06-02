@@ -11,6 +11,11 @@ abstract class CtrlThemeFour extends CtrlDefault {
     return isset($this->router->options['originalReq']) ? $this->router->options['originalReq'] : $this->req;
   }
 
+  protected function extendByBasePath(array $links) {
+    foreach ($links as &$v) $v['link'] = $this->d['basePath'].'/'.$v['link'];
+    return $links;
+  }
+
   protected function init() {
     $this->d['basePath'] = ThmFourModule::$basePaths[$this->themeFourModule()];
     if ($this->d['basePath']) $this->d['basePath'] = '/'.$this->d['basePath'];
