@@ -53,8 +53,10 @@
   </div>
 </div>
 <? if ($d['submenu']) { ?>
-<div class="container submenu">
-  <? $this->tpl('cp/links', $d['submenu']) ?>
+<div class="container">
+  <div class="submenu">
+    <? $this->tpl('cp/links', $d['submenu']) ?>
+  </div>
 </div>
 <? } ?>
 <div class="container body <?= $d['layout'] ?>">
