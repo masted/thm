@@ -16,6 +16,9 @@ font-size: 18px;
 top: 0;
 left: 0;
 position: absolute;
+font-family: Tahoma;
+padding-bottom: 13px;
+font-size: 14px;
 }
 .bookmarks a {
 margin: 0 10px;
