@@ -6,7 +6,7 @@ class ThmFourRouterManager extends RouterManager {
     $req = O::get('Req');
     $firstParam = null;
     if (isset($req->params[0])) {
-      if ($req->params[0] == 'profile') {
+      if ($req->params[0] == 'profile' or $req->params[0] == 'home') {
         return new ThmFourRouter;
       }
       if (isset(ThmFourModule::$names[$req->params[0]])) {

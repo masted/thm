@@ -82,6 +82,15 @@ background-image: url(/thm/img/cols2-top.png);
 .body.cols2 .cBottom {
 background-image: url(/thm/img/cols2-bottom.png);
 }
+.body.cols2-wide .cBody {
+background-image: url(/thm/img/cols2-wide-middle.png);
+}
+.body.cols2-wide .cTop {
+background-image: url(/thm/img/cols2-wide-top.png);
+}
+.body.cols2-wide .cBottom {
+background-image: url(/thm/img/cols2-wide-bottom.png);
+}
 .header {
 color: #ccc;
 vertical-align: middle;
