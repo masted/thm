@@ -18,5 +18,8 @@ height: 13px;
 padding: 5px;
 }
 .pNums b, .pNums a:hover {
-border-color: #555;
+border-color: #999;
+}
+.pNums a {
+background: #F4F4F4;
 }
