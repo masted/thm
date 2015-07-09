@@ -22,6 +22,10 @@ class ThmFourRouter extends DefaultRouter {
   }
 
   function _getController() {
+    $homeProjectControllerClass = 'Ctrl'.ucfirst(PROJECT_KEY).'Home';
+    if (!isset($this->req->params[0]) and class_exists($homeProjectControllerClass)) {
+     return new $homeProjectControllerClass($this);
+    }
     if (isset($this->req->params[0]) and $this->req->params[0] == 'profile') {
       return new CtrlThmFourProfile($this);
     }
