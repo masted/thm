@@ -30,6 +30,7 @@ class ThmFourRouter extends DefaultRouter {
       $destPath = UPLOAD_PATH.'/'.Misc::removePrefix('u/', $this->req->path);
       Dir::make(dirname($destPath));
       (new Image)->resizeAndSave(UPLOAD_PATH.'/'.$m[1].'/'.$m[4], $destPath, $m[2], $m[3]);
+      redirect('/'.$this->req->path);
       die();
     }
     $homeProjectControllerClass = 'Ctrl'.ucfirst(PROJECT_KEY).'Home';
