@@ -21,7 +21,17 @@ class ThmFourRouter extends DefaultRouter {
     return ThmFourRouter::isMobile() ? 'mobile' : 'default';
   }
 
+  static function thumbUrl($path, $x, $y) {
+    return '/u/thumb/'.dirname($path).'/'.$x.'x'.$y.'/'.basename($path);
+  }
+
   function _getController() {
+    if (preg_match('/^u\\/thumb\\/(.+)\\/(\d+)x(\d+)\\/([^\\/]+)/', $this->req->path, $m)) {
+      $destPath = UPLOAD_PATH.'/'.Misc::removePrefix('u/', $this->req->path);
+      Dir::make(dirname($destPath));
+      (new Image)->resizeAndSave(UPLOAD_PATH.'/'.$m[1].'/'.$m[4], $destPath, $m[2], $m[3]);
+      die();
+    }
     $homeProjectControllerClass = 'Ctrl'.ucfirst(PROJECT_KEY).'Home';
     if (!isset($this->req->params[0]) and class_exists($homeProjectControllerClass)) {
      return new $homeProjectControllerClass($this);
