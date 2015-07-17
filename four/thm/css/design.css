@@ -208,5 +208,7 @@ display: block;
 }
 
 .footer {
+margin-top: 10px;
+font-size: 11px;
 text-align: center;
 }

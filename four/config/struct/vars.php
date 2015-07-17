@@ -1,12 +1,11 @@
 <?php
 
 return [
-  'vkBloggers'            => [
-    'title'  => 'ВК блоггеры',
+  'layoutTexts'            => [
+    'title'  => 'Тексты в лейауте',
     'fields' => [
-      'name' => [
-        'title'     => 'Имя',
-        'type'  => 'fieldList'
+      'footer' => [
+        'title'     => 'Подвал',
       ]
     ]
   ],

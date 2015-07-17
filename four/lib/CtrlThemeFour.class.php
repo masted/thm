@@ -1,6 +1,6 @@
 <?php
 
-abstract class CtrlThemeFour extends CtrlDefault {
+abstract class CtrlThemeFour extends CtrlThemeFourBase {
 
   abstract protected function themeFourModule();
 
@@ -17,6 +17,7 @@ abstract class CtrlThemeFour extends CtrlDefault {
   }
 
   protected function init() {
+    parent::init();
     $this->d['basePath'] = ThmFourModule::$basePaths[$this->themeFourModule()];
     if ($this->d['basePath']) $this->d['basePath'] = '/'.$this->d['basePath'];
     else $this->d['basePath'] = '';
