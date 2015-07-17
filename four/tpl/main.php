@@ -77,8 +77,11 @@
     </div>
   </div>
   <div class="cBottom">
-    <? $this->tpl('counters', null, true) ?>
   </div>
+</div>
+<div class="footer">
+  <? $this->tpl('counters', null, true) ?>
+  <?= $d['footer'] ?>
 </div>
 </body>
 </html>
