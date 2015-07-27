@@ -169,8 +169,9 @@ border-top: 1px solid #E8E8E8;
 width: 234px;
 margin-left: 5px;
 }
-.colBody.colContent, .colBodyContent {
-padding: 20px 20px 10px 20px;
+.colBody.colContent,
+.colBodyContent {
+padding: 10px 20px 10px 20px;
 }
 .addForm input[type=submit] {
 margin-top: 15px;
@@ -191,7 +192,9 @@ padding: 10px;
 background: #FFECB2;
 border: 1px solid #FFBF00;
 }
-.mainContent, .itemContent, .ddItems {
+.mainContent,
+.itemContent,
+.ddItems {
 padding: 20px;
 }
 a.thumb {
@@ -209,6 +212,7 @@ display: block;
 
 .footer {
 margin-top: 10px;
+margin-bottom: 30px;
 font-size: 11px;
 text-align: center;
 }

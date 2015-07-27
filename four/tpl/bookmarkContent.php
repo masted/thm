@@ -6,6 +6,3 @@
 <div class="colBody">
   <?= $d['contentTpl'] ? $this->tpl($d['contentTpl'], $d, false, false, 'contentTpl') : '<div class="colBodyContent">'.$d['html'].'</div>' ?>
 </div>
-<script>
-  new Ngn.DdoItemsEdit();
-</script>
