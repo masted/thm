@@ -11,30 +11,27 @@ class ThmFourModule {
   }
 
   static function install($name) {
-    $structures = require NGN_ENV_PATH."/thm-four-modules/modules/$name/structures.php";
-    foreach ($structures as $strName => $fields) {
+    $file = NGN_ENV_PATH.'/thm-four-modules/modules/'.$name.'/structures.php';
+    if (!file_exists($file)) return;
+    $structures = require $file;
+    foreach ($structures as $strName => $strFields) {
+      try {
+        DdStructureCore::create($strName, $strFields);
+        output2("Structure '$strName' created");
+      } catch (AlreadyExistsException $e) {
+        output("Structure '$strName' exists");
+      }
       $fieldsManager = new DdFieldsManager($strName);
-      foreach ($fields as $field) {
-        if (($existingField = $fieldsManager->items->getItemByField('name', $field['name']))) {
-          
-          $f = Arr::filterByKeys($existingField, [
-            'oid',
-            'name',
-            'title',
-            'type',
-            'required',
-            'defaultDisallow',
-            'notList',
-            'editable',
-            'virtual',
-            'system',
-            'filterable'
-          ]);
-
-          $fieldsManager->update($existingField['id'], $f);
-
+      foreach ($strFields as $strField) {
+        if (($existingField = $fieldsManager->items->getItemByField('name', $strField['name']))) {
+          $strFieldKeys = array_keys($strField);
+          $existingFieldFiltered = Arr::filterByKeys($existingField, $strFieldKeys);
+          if ($existingFieldFiltered != $strField) {
+            output("Updating '{$existingField['name']}' field. (module: $name, str: $strName)");
+            $fieldsManager->update($existingField['id'], $strField);
+          }
         } else {
-          $fieldsManager->create($field);
+          $fieldsManager->create($strField);
         }
       }
     }
