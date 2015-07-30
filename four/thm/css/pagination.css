@@ -1,11 +1,16 @@
 .bColBody {
 position: relative;
 }
-.pNums {
+.pNumsTop.pNums {
 z-index: 1;
 position: absolute;
 top: -1px;
 right: 9px;
+}
+.pNumsBottom.pNums {
+float: right;
+margin-top: -20px;
+margin-right: 10px;
 }
 .pNums a, .pNums b {
 border: 1px solid #ccc;
