@@ -31,6 +31,7 @@ class ThmFourModule {
             $fieldsManager->update($existingField['id'], $strField);
           }
         } else {
+          output("Creating '{$strField['name']}' field. (module: $name, str: $strName)");
           $fieldsManager->create($strField);
         }
       }
