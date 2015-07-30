@@ -36,7 +36,7 @@ abstract class CtrlThemeFour extends CtrlThemeFourBase {
       Sflm::frontend('css')->addLib('icons');
       Sflm::frontend('css')->addFolder(WEBROOT_PATH.'/m/css');
       Sflm::frontend('css')->addFolder(NGN_ENV_PATH.'/thm/four/thm/css');
-      Sflm::frontend('css')->addFolder(NGN_ENV_PATH.'/thm-four-modules/'.$this->themeFourModule().'/m/css');
+      Sflm::frontend('css')->addFolder(ThmFourModule::$rootPath.'/'.$this->themeFourModule().'/m/css');
       Sflm::frontend('js')->addLib('m/js/init.js');
     }
   }

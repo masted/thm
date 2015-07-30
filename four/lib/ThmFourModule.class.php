@@ -2,16 +2,16 @@
 
 class ThmFourModule {
 
-  static $names = [], $basePaths = [];
+  static $names = [], $basePaths = [], $rootPath;
 
   static function init($name, $baseParam = null) {
     self::$names[$baseParam] = $name;
     self::$basePaths[$name] = $baseParam;
-    Ngn::addBasePath(NGN_ENV_PATH.'/thm-four-modules/modules/'.$name, 3);
+    Ngn::addBasePath(self::$rootPath.'/'.$name, 3);
   }
 
   static function install($name) {
-    $file = NGN_ENV_PATH.'/thm-four-modules/modules/'.$name.'/structures.php';
+    $file = self::$rootPath.'/'.$name.'/structures.php';
     if (!file_exists($file)) return;
     $structures = require $file;
     foreach ($structures as $strName => $strFields) {
@@ -38,3 +38,5 @@ class ThmFourModule {
   }
 
 }
+
+ThmFourModule::$rootPath = NGN_ENV_PATH.'/thm-four-modules/modules';
