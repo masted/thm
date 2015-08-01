@@ -29,7 +29,7 @@
 <div class="header">
   <div class="container">
     <? if (!$d['mobile']) { ?>
-    <a href="/" class="logo"><?= SITE_TITLE ?></a>
+    <a href="/" class="logo"><i><b></b></i><?= SITE_TITLE ?></a>
     <div class="sectionWrapper"><a href="<?= $d['basePath'] ?>" class="section"><?= $d['sectionTitle'] ?></a></div>
     <div class="menu">
       <? if ($d['menu']) $this->tpl('cp/links', $d['menu']) ?>

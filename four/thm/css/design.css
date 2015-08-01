@@ -22,13 +22,11 @@ font-family: Boblic;
 font-size: 30px;
 margin: 5px;
 margin-top: 7px;
-margin-left: 20px;
 margin-right: 10px;
 display: block;
 float: left;
 text-decoration: none;
-background: url(/thm/img/sm_logo.png) no-repeat;
-padding-left: 45px;
+
 }
 .header a:hover.logo {
 text-decoration: none;

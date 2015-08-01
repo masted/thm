@@ -46,6 +46,7 @@ abstract class CtrlThemeFour extends CtrlThemeFourBase {
   }
 
   protected function afterAction() {
+    parent::afterAction();
     if ($this->d['mobile']) $this->d['layout'] = 'cols1';
   }
 
