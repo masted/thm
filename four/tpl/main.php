@@ -21,11 +21,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
   {sflm}
   <? } ?>
+  <link rel="stylesheet" type="text/css" href="/thm/css/design.css" media="screen, projection"/>
 </head>
 <body>
-
-<link rel="stylesheet" type="text/css" href="/thm/css/design.css" media="screen, projection"/>
-
 <div class="header">
   <div class="container">
     <? if (!$d['mobile']) { ?>
