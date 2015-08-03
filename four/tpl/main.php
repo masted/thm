@@ -19,7 +19,7 @@
   </script>
   <? } else { ?>
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
-  {sflm}
+    {sflm}
   <? } ?>
   <link rel="stylesheet" type="text/css" href="/thm/css/design.css" media="screen, projection"/>
 </head>
@@ -81,5 +81,7 @@
   <? $this->tpl('counters', null, true) ?>
   <?= $d['footer'] ?>
 </div>
+
 </body>
+
 </html>

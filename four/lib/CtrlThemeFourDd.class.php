@@ -18,6 +18,19 @@ abstract class CtrlThemeFourDd extends CtrlThemeFour {
     $this->d['layout'] = 'cols2';
     $this->d['blocksTpl'] = 'empty';
     $this->d['tpl'] = 'bookmarkContent';
+    $this->d['contentTpl'] = 'dd/list';
+  }
+
+  function action_item() {
+    $this->d['layout'] = 'cols2';
+    $this->d['blocksTpl'] = 'empty';
+    $this->d['tpl'] = 'bookmarkContent';
+    $this->d['contentTpl'] = 'dd/item';
+    $this->setPageTitle(' ');
+    $item = Misc::checkEmpty($this->items()->getItem($this->req->param(1)));
+    if ($item['title']) $this->setPageTitle($item['title']);
+    $ddo = new Ddo($this->getStrName(), 'siteItem');
+    $this->d['html'] = $ddo->setItem($item)->els();
   }
 
 }
