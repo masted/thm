@@ -12,7 +12,7 @@ abstract class CtrlThemeFour extends CtrlThemeFourBase {
   }
 
   protected function extendByBasePath(array $links) {
-    foreach ($links as &$v) $v['link'] = $this->d['basePath'].'/'.$v['link'];
+    foreach ($links as &$v) $v['link'] = $this->d['basePath'].($v['link'] ? '/'.$v['link'] : '');
     return $links;
   }
 

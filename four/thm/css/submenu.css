@@ -13,3 +13,7 @@ text-decoration: none;
 color: #000;
 text-decoration: underline;
 }
+.submenu a.sel {
+color: #000;
+border-color: #999;
+}
