@@ -8,6 +8,18 @@ class ThmFourModule {
     self::$names[$baseParam] = $name;
     self::$basePaths[$name] = $baseParam;
     Ngn::addBasePath(self::$rootPath.'/'.$name, 3);
+
+  }
+
+  // installer
+
+  static $updated = false;
+
+  static function update() {
+    foreach (ThmFourModule::$names as $name) {
+      ThmFourModule::install($name);
+    }
+    if (!self::$updated) output('No changes');
   }
 
   static function install($name) {
@@ -18,8 +30,8 @@ class ThmFourModule {
       try {
         DdStructureCore::create($strName, $strFields);
         output2("Structure '$strName' created");
+        self::$updated = true;
       } catch (AlreadyExistsException $e) {
-        output("Structure '$strName' exists");
       }
       $fieldsManager = new DdFieldsManager($strName);
       foreach ($strFields as $strField) {
@@ -27,10 +39,12 @@ class ThmFourModule {
           $strFieldKeys = array_keys($strField);
           $existingFieldFiltered = Arr::filterByKeys($existingField, $strFieldKeys);
           if ($existingFieldFiltered != $strField) {
+            self::$updated = true;
             output("Updating '{$existingField['name']}' field. (module: $name, str: $strName)");
             $fieldsManager->update($existingField['id'], $strField);
           }
         } else {
+          self::$updated = true;
           output("Creating '{$strField['name']}' field. (module: $name, str: $strName)");
           $fieldsManager->create($strField);
         }
