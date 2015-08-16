@@ -26,7 +26,8 @@ abstract class CtrlThemeFourDd extends CtrlThemeFour {
     $this->d['blocksTpl'] = 'empty';
     $this->d['tpl'] = 'bookmarkContent';
     $this->d['contentTpl'] = 'dd/item';
-    $this->d['item'] = $item = Misc::checkEmpty($this->items()->getItem($this->req->param(1)));
+    $this->d['item'] = $item = $this->items()->getItem($this->req->param(1));
+    if (!$item) throw new Error404;
     $this->setPageTitle($item['title'] ?: ' ');
     if ($item['title']) $this->setPageTitle($item['title']);
     $ddo = new Ddo($this->getStrName(), 'siteItem');
