@@ -34,9 +34,15 @@ class ThmFourRouter extends DefaultRouter {
       redirect('/'.$this->req->path);
       die();
     }
+    if (ThmFourRouter::isMobile()) {
+      $mobileHomeProjectControllerClass = 'Ctrl'.ucfirst(PROJECT_KEY).'MobileHome';
+      if (!isset($this->req->params[0]) and class_exists($mobileHomeProjectControllerClass)) {
+        return new $mobileHomeProjectControllerClass($this);
+      }
+    }
     $homeProjectControllerClass = 'Ctrl'.ucfirst(PROJECT_KEY).'Home';
     if (!isset($this->req->params[0]) and class_exists($homeProjectControllerClass)) {
-     return new $homeProjectControllerClass($this);
+      return new $homeProjectControllerClass($this);
     }
     if (isset($this->req->params[0]) and $this->req->params[0] == 'profile') {
       return new CtrlThmFourProfile($this);

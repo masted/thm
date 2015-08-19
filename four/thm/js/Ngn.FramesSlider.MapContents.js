@@ -2,14 +2,14 @@ Ngn.FramesSlider.MapContents = new Class({
   Extends: Ngn.FramesSlider,
 
   options: {
-    map: {}
+    map: {} // хэш, где ключ - это селектор контейнера с HTML-кодом, а значение - селектор контейнера, для размещения в нём этого HTML-кода
   },
 
   initialize: function(rootContainer, framesContainer, options) {
     this.parent(framesContainer, options);
     this.rootContainer = rootContainer;
     this.fx.addEvent('start', function() {
-      this.setTargetHtml(false);
+      this.setTargetHtml();
     }.bind(this));
   },
 
@@ -20,7 +20,6 @@ Ngn.FramesSlider.MapContents = new Class({
     if (!force && this.sourceStorage[id] !== undefined) {
       return this.sourceStorage[id];
     }
-    c(frameN);
     var el = this.frames[frameN].getElement(sourceSelector);
     if (!el) {
       return this.sourceStorage[id] = false;

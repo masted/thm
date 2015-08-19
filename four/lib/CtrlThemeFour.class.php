@@ -24,14 +24,9 @@ abstract class CtrlThemeFour extends CtrlThemeFourBase {
     if (Auth::get('id')) {
       $this->d['profile'] = (new DdItems('profile'))->getItemByField('userId', Auth::get('id'));
     }
-    //die2($this->d['profile']);
-    $this->d['mobile'] = ThmFourRouter::isMobile();
     Sflm::$absBasePaths['thm'] = NGN_ENV_PATH.'/thm/four/thm';
     $this->d['menu'] = Config::getVar('menu', true);
-    // different logic for mobile and desktop
-    if ($this->d['mobile']) {
-      // ...
-    } else{
+    if (!$this->d['mobile']) {
       $this->d['layout'] = 'cols1';
       Sflm::frontend('css')->addLib('icons');
       Sflm::frontend('css')->addFolder(WEBROOT_PATH.'/m/css');
@@ -43,11 +38,6 @@ abstract class CtrlThemeFour extends CtrlThemeFourBase {
 
   function oProcessForm(DdForm $form) {
     $form->options['deleteFileUrl'] = $this->d['basePath'].'?a=deleteFile';
-  }
-
-  protected function afterAction() {
-    parent::afterAction();
-    if ($this->d['mobile']) $this->d['layout'] = 'cols1';
   }
 
 }
