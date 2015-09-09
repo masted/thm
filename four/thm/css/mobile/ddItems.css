@@ -1,0 +1,11 @@
+.ddItems * {
+margin: 0;
+}
+.ddItems .item, .menu a {
+padding: 10px;
+background: url(/i/img/black/arrow-right.gif) no-repeat 98% center;
+border-bottom: 1px solid #ccc;
+}
+.ddItems .item:active {
+text-decoration: underline;
+}

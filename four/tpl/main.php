@@ -3,6 +3,7 @@
 <head>
   <title><?= $d['pageHeadTitle'] ?></title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="shortcut icon" href="/m/img/favicon.ico">
   <link rel="icon" href="data:;base64,=">
   <? if (!$d['mobile']) { ?>
     {sflm}
@@ -70,12 +71,11 @@
   <div class="cBottom">
   </div>
 </div>
-<?/*
+
 <div class="footer">
   <? $this->tpl('counters', null, true) ?>
   <?= $d['footer'] ?>
 </div>
-*/?>
 
 </body>
 

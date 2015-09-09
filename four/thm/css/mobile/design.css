@@ -1,84 +1,21 @@
-
-.subscript {
-display: inline-block;
-font-size: 13px;
-}
-.header {
-background: #000;
-height: 40px;
-position: relative;
-}
-.header .title {
-color: #fff;
-height: 40px;
-line-height: 40px;
-text-align: center;
-overflow: hidden;
-}
-.hBackBtn {
-position: absolute;
-top: 0;
-right: 0;
-width: 40px;
-height: 40px;
-background: #555 url(/i/img/white/arrow-left.png) no-repeat center center;
-}
-
-.cBodyPad {
-padding: 10px;
-}
 .pages {
 overflow: hidden;
-}
-
-.header {
-position: fixed;
--webkit-backface-visibility: hidden;
 }
 .container.body {
 padding-top: 40px;
 }
-/*
-.personal, .menu, .logo {
-display: inline-block;
-}
-*/
-.header a {
-color: #fff;
-}
-body {
-margin: 0;
-font-family: verdana, arial, helvetica, sans-serif;
-}
-body, h2 {
-font-size: 16px;
-}
-
-.ddItems * {
-margin: 0;
-}
-.ddItems .item, .menu a {
-padding: 10px;
-background: url(/i/img/black/arrow-right.gif) no-repeat 98% center;
-border-bottom: 1px solid #ccc;
-}
-
-.menu a {
-display: block;
-}
-
-
-
-.ddItems .item:active {
-text-decoration: underline;
-}
 .cBody {
 float: left;
-/*
-height: 200px;
-overflow-y: auto;
-*/
 }
+.cBodyPad {
+padding: 10px;
+}
+
+
+
+
+
+
 
 
 
