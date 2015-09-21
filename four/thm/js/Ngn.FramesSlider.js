@@ -70,12 +70,12 @@ Ngn.FramesSlider = new Class({
     if (this.status) return;
     this.frameN++;
     var hasNext = !(this.frames.length - 1 == this.frameN);
-    this.oneTimeCompleteAction = onComplete.pass(hasNext);
+    if (onComplete) this.oneTimeCompleteAction = onComplete.pass(hasNext);
     this.fx.start(this.getCurrPos(), this.getCurrPos() - this.frameWidth);
   },
   prev: function(onComplete) {
     if (this.status) return;
-    this.oneTimeCompleteAction = onComplete;
+    if (onComplete) this.oneTimeCompleteAction = onComplete;
     this.frameN--;
     this.fx.start(this.getCurrPos(), this.getCurrPos() + this.frameWidth);
   }, // frames manager
