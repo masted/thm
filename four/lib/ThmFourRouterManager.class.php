@@ -14,7 +14,7 @@ class ThmFourRouterManager extends RouterManager {
     }
     if (!$firstParam) return new ThmFourRouter($this->options['routerOptions']);
     $fourModule = ThmFourModule::$names[$firstParam];
-    Ngn::addBasePath(NGN_ENV_PATH.'/thm-four-modules/'.$fourModule, 4, $fourModule);
+    Ngn::addBasePath(NGN_ENV_PATH.'/thm-four-modules/modules/'.$fourModule, 4, $fourModule);
     $routerClass = ucfirst($fourModule).'Router';
     if (!class_exists($routerClass)) $routerClass = 'ThmFourRouter';
     if ($firstParam) {

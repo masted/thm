@@ -5,24 +5,19 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <link rel="shortcut icon" href="/m/img/favicon.ico">
   <link rel="icon" href="data:;base64,=">
-  <? if (!$d['mobile']) { ?>
-    {sflm}
-    <script src="/i/js/tiny_mce/tiny_mce.js"></script>
-    <script>
-      Ngn.authorized = <?= Auth::get('id') ?: 'false' ?>;
-      Ngn.isAdmin  = <?= Misc::isAdmin() ? 'true' : 'false' ?>;
-      window.addEvent('domready', function() {
-        Ngn.addBtnAction('.auth', function() {
-          new Ngn.Dialog.Auth();
-        });
-        Ngn.Milkbox.add(document.getElements('a.lightbox'));
+  {sflm}
+  <script src="/i/js/tiny_mce/tiny_mce.js"></script>
+  <script>
+    Ngn.authorized = <?= Auth::get('id') ?: 'false' ?>;
+    Ngn.isAdmin  = <?= Misc::isAdmin() ? 'true' : 'false' ?>;
+    window.addEvent('domready', function() {
+      Ngn.addBtnAction('.auth', function() {
+        new Ngn.Dialog.Auth();
       });
-    </script>
-    <link rel="stylesheet" type="text/css" href="/thm/css/design.css" media="screen, projection"/>
-  <? } else { ?>
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
-    {sflm}
-  <? } ?>
+      Ngn.Milkbox.add(document.getElements('a.lightbox'));
+    });
+  </script>
+  <link rel="stylesheet" type="text/css" href="/thm/css/design.css" media="screen, projection"/>
 </head>
 <body>
 <div class="header">
